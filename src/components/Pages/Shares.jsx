@@ -117,7 +117,7 @@ theme="light"
 
 
       <div className="flex flex-wrap mt-4 gap-6">
-        {data.slice(1, visible).map((data, i) => (
+        {data.slice(0, visible).map((data, i) => (
           <div
             style={{ maxwidth: 236, width: 236 }}
             key={i}
@@ -130,7 +130,7 @@ theme="light"
                 src={data.images[0]}
                 alt={data.name}
               />
-            </Link>
+          
 
             <div className="p-5">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
@@ -140,7 +140,7 @@ theme="light"
                 {data.description}
               </p>
             </div>
-
+            </Link>
             <button
               onClick={() => addToFav(data)}
               className="bg-violet-400 text-white font-medium py-1 px-3 rounded-xl"
