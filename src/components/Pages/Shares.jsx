@@ -27,16 +27,16 @@ const Shares = () => {
       if (!has) {
         setFavouriteList([...favouriteList, data]);
 
-        toast('Product is added to wishlist', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          });
+        // toast('Product is added to wishlist', {
+        //   position: "top-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "light",
+        //   });
 
 
       } else {
@@ -81,7 +81,7 @@ const Shares = () => {
   return (
     <div className=" pl-28 mx-auto mt-10">
 
-
+ 
 
       
 <ToastContainer
@@ -117,12 +117,13 @@ theme="light"
 
 
       <div className="flex flex-wrap mt-4 gap-6">
-        {data.slice(0, visible).map((data, i) => (
+        {data.slice(1, visible).map((data, i) => (
           <div
             style={{ maxwidth: 236, width: 236 }}
             key={i}
             className=" border rounded-lg shadow cursor-pointer"
           >
+            
             <Link to={"/products/" + data.id}>
               <img
                 className="rounded-t-lg w-full"
@@ -130,6 +131,7 @@ theme="light"
                 alt={data.name}
               />
             </Link>
+
             <div className="p-5">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                 {data.title}

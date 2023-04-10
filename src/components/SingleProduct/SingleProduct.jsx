@@ -34,6 +34,7 @@ const SIngleProduct = () => {
     getData();
   }, []);
 
+  
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const { favouriteList, setFavouriteList } = useContext(FavouriteContext);
@@ -73,7 +74,7 @@ const SIngleProduct = () => {
   return (
     <div className="mt-16">
 
-<ToastContainer
+{/* <ToastContainer
 position="top-right"
 autoClose={5000}
 hideProgressBar={false}
@@ -85,8 +86,8 @@ draggable
 pauseOnHover
 theme="light"
 />
-{/* Same as */}
-<ToastContainer />
+
+<ToastContainer /> */}
 
 
       <div className="">
